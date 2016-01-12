@@ -8,6 +8,7 @@ function Collection() {
 
     this.find = function (id) {
         var obj = null;
+        id = parseInt(id, 10);
         objects.forEach(function (value) {
             if (value.id === id) {
                 obj = value;

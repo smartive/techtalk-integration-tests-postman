@@ -22,9 +22,9 @@ app.post('/login', function (req, res) {
     if (req.body && req.body.user === credentials.user && req.body.pass === credentials.pass) {
         return res.json({
             authToken: '1234567890'
-        });
+        }).end();
     }
-    return res.status(401);
+    return res.status(401).end();
 });
 
 app.get('/objects', authenticate, function (req, res) {
