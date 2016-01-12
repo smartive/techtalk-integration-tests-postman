@@ -29,6 +29,7 @@ function Collection() {
         if (obj) {
             objects.splice(objects.indexOf(obj), 1);
         }
+        return !!obj;
     };
 }
 
