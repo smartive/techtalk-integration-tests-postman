@@ -31,3 +31,16 @@ Executing with a data file means you run as many iterations as there are data-ob
 ```bash
 newman -c integration-tests-with-data.json -d test-data.json
 ```
+
+### With package.json
+
+For convenience reasons, I created commands in the `package.json` to ease up the usage. `npm start` now uses nodemon to fast restart the API when you type `rs` into your console.
+It's possible to use
+```bash
+npm test
+``` 
+for the normal integration tests and 
+```bash
+npm run testWithData
+```
+for the iterated tests with different datasets.
